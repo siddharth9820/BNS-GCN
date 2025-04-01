@@ -39,7 +39,7 @@ export SCRIPT="python -u main.py \
   --backend gloo \
   --parts-per-node $GPUS_PER_NODE \
   --master-addr $MASTER_ADDR \
-  --port $MASTER_PORT \ 
+  --port $MASTER_PORT \
   --fix-seed"
 
 run_cmd="srun -N $NNODES -n $GPUS -c 32 --cpu-bind=cores --gpus-per-node=4 ./runner.sh"

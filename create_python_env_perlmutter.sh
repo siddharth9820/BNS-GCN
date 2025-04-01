@@ -14,11 +14,12 @@ cd $WRKSPC
 echo -e "${RED}Creating Python Environment in $WRKSPC:${GREEN}"
 
 module load pytorch/1.13.1
-python -m venv $WRKSPC/$ENV_NAME 
+python -m venv $WRKSPC/$ENV_NAME --system-site-packages
 
 echo -e "${RED}Installing Dependencies:${GREEN}"
 source $WRKSPC/$ENV_NAME/bin/activate
-pip3 install ogb dgl
+pip install --upgrade pip
+pip install -r requirements.txt
 
 
 python -c "import torch; print(torch.__version__)"
