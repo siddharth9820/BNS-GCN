@@ -1,5 +1,19 @@
 # BNS-GCN: Efficient Full-Graph Training of Graph Convolutional Networks with Partition-Parallelism and Random Boundary Node Sampling
 
+## Running on Perlmutter
+Install environment
+```bash
+bash create_python_env_perlmutter.sh
+```
+
+Make `runner.sh` executable
+```bash
+chmod +x runner.sh
+```
+
+`run.sh` is your main entrypoint bash script. You can run it directly in an interactive job or via sbatch.
+
+
 Cheng Wan<sup>\*</sup> (Rice University), Youjie Li<sup>\*</sup> (UIUC), Ang Li (PNNL), Nam Sung Kim (UIUC), Yingyan Lin (Rice University)
 
 (<sup>\*</sup>Equal contribution)
